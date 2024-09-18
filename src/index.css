@@ -1,0 +1,101 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Hide scroll bars */
+}
+
+.scroll-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Hide vertical scrolling */
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-type: x mandatory; /* Enable horizontal snap scrolling */
+}
+
+.section {
+  flex: 0 0 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+.model {
+  background-color: #101010; /* Black background for model section */
+}
+
+.about {
+  background-color: #f0f0f0; /* Lighter background for about section */
+}
+
+.transmission {
+  background-color: #d3d3d3; /* Another example background color */
+}
+
+.contact {
+  background-color: #ffd700; /* Another example background color */
+}
+
+.menu {
+  background-color: #008000; /* Another example background color */
+}
+
+.next-button {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  z-index: 1;
+}
+
+.navbar {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row; /* Arrange items horizontally */
+}
+
+.navbar ul li {
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 5px; /* Add horizontal spacing between items */
+  background-color: transparent; /* Remove background color */
+  color: inherit; /* Inherit text color from parent */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.white-text .menu-item {
+  color: #ffffff; /* White text color for model section */
+}
+
+.black-text .menu-item {
+  color: #000000; /* Black text color for other sections */
+}
+/* src/index.css or src/app.css */
+@font-face {
+  font-family: 'Scripter';
+  src: url('./assets/fonts/AeonikTRIAL-Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Apply the font globally */
+body {
+  font-family: 'AeonikTRIAL', sans-serif;
+}

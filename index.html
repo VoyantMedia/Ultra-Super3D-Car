@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supercar</title>
+  <style>
+    /* Reset default styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* Hide scroll bars */
+    }
+
+    /* Ensure the #root element fills the entire viewport */
+    #root {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
+/* app.css */
+
+/* Styles for About component */
+.section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.canvas-container {
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.about-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: black;
+  text-align: center;
+}
+
+.about-content img {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.about-content h1 {
+  font-size: 2rem; /* Adjust font size as needed */
+  color: #333; /* Adjust font color as needed */
+}
+
+.about-content p {
+  font-size: 1.2rem; /* Adjust font size as needed */
+  color: #666; /* Adjust font color as needed */
+}

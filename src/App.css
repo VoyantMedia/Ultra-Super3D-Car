@@ -1,0 +1,133 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Hide scroll bars */
+}
+
+.scroll-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden; /* Hide horizontal scrolling */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  width: 100vw;
+  height: 100vh;
+}
+
+.section {
+  flex: 0 0 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  background-color: #f0f0f0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+/* Adjust the button position */
+.next-button {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  z-index: 1;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.polygon-animation {
+  animation: fadeOut 0.5s forwards;
+}
+.annotation-content {
+  position: absolute;
+  background-color: white;
+  border: 3px solid  #ffffff; /* Thickened border */
+  padding: 10px;
+  max-width: 200px;
+  max-height: 70px; /* Set maximum height */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.annotation-close {
+  cursor: pointer;
+  float: right;
+  background-image: url('close-icon.svg'); /* Replace with your close icon image */
+  background-size: cover;
+  width: 12px;
+  height: 12px;
+  margin-top: -10px; /* Adjust as necessary for positioning */
+  margin-right: -10px; /* Adjust as necessary for positioning */
+  border: none;
+}
+
+.annotation-text {
+  font-size: 16px; /* Reduced font size */
+  color: black; /* Text color */
+  white-space: normal; /* Prevents text from wrapping too early */
+}
+text {
+  font-size: 8px; /* Reduced font size */
+  color: black; /* Text color */
+}
+.triangle-bullet {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid white; /* Adjust size and color as needed */
+  margin-right: 5px;
+}
+
+.typewriter-text {
+  overflow: hidden;
+  border-right: .15em solid orange; /* The typewriter cursor color */
+  white-space: nowrap;
+  margin: 0 auto; /* Gives typewriter effect */
+  letter-spacing: .15em; /* Adjust as needed */
+  padding: 1%;
+}
+
+.typewriter-text-show {
+  animation: typewriter-anim 1s steps(20) 1s 1 normal both;
+}
+
+@keyframes typewriter-anim {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.navbar {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+/* app.css */
