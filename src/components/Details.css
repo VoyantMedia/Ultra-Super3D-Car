@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .details-container {
   display: flex;
   align-items: center; /* Center items vertically */
@@ -63,3 +64,6 @@
   color: #000; /* Color for the close icon */
   z-index: 2; /* Ensure it appears above other content */
 } 
+=======
+/* Placeholder CSS file */ 
+>>>>>>> 2ef0c06b1c8a4b711cb4e03f56dd973d8cd69dc1
