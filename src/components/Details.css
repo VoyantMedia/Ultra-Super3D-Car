@@ -1,0 +1,65 @@
+.details-container {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  height: 100vh; /* Full viewport height */
+  padding: 20px; /* Add some padding */
+  position: relative; /* Position relative for close button */
+}
+
+.video-thumbnail {
+  flex: 0 0 50%; /* Set width to 50% for larger thumbnail */
+  position: relative; /* Position relative for overlapping effect */
+}
+
+.video-thumbnail img {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+.play-button {
+  position: absolute; /* Position the play button over the image */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for centering */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  border: none; /* Remove default button border */
+  border-radius: 50%; /* Make it circular */
+  width: 50px; /* Set width */
+  height: 50px; /* Set height */
+  font-size: 24px; /* Font size for the play icon */
+  cursor: pointer; /* Change cursor to pointer */
+  z-index: 1; /* Ensure it appears above the image */
+}
+
+.text-section {
+  flex: 0 0 30%; /* Set width to 30% for smaller text box */
+  margin-left: 20px; /* Adjust margin to prevent overlap with the thumbnail */
+  padding: 20px; /* Add padding */
+  background-color: #F7C2CA; /* Set the desired background color */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+}
+
+.title {
+  font-size: 24px; /* Title font size */
+  margin-bottom: 10px; /* Space below title */
+}
+
+.body-text {
+  font-size: 16px; /* Body text font size */
+  line-height: 1.5; /* Line height for readability */
+}
+
+.close-button {
+  position: absolute; /* Position the close button */
+  top: 20px; /* Adjust top position */
+  right: 20px; /* Adjust right position */
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  font-size: 24px; /* Font size for the close icon */
+  cursor: pointer; /* Change cursor to pointer */
+  color: #000; /* Color for the close icon */
+  z-index: 2; /* Ensure it appears above other content */
+} 

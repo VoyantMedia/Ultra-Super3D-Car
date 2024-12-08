@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   const canvasRef = useRef(null);
@@ -235,7 +236,9 @@ const About = () => {
         onMouseMove={handleMouseMove}
       ></canvas>
       <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1, color: 'black', textAlign: 'center' }}>
-        <img src="/BMW-M4-4k.jpg" alt="Video Thumbnail" style={{ width: '200px', marginBottom: '20px' }} />
+        <Link to="/details">
+          <img src="/BMW-M4-4k.jpg" alt="Video Thumbnail" style={{ width: '200px', marginBottom: '20px' }} />
+        </Link>
         <h1>The Machine</h1>
         <p>An engineering marvel, built for elegance and performance.</p>
       </div>
