@@ -1,0 +1,40 @@
+.annotation-content {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border: 3px solid #ffffff; /* Thickened border */
+    padding: 10px;
+    max-width: 200px; /* Set maximum width */
+    max-height: 70px; /* Set maximum height */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    z-index: 10; /* Ensure it appears above other elements */
+    margin: 0; /* Reset margin */
+    overflow: hidden; /* Prevent overflow */
+    display: flex; /* Use flexbox for better layout */
+    flex-direction: column; /* Stack children vertically */
+  }
+  
+  .annotation-close {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 12px;
+    height: 12px;
+    background-image: url('close-icon.svg'); /* Replace with your close icon image */
+    background-size: cover;
+    border: none;
+  }
+  
+  .annotation-text {
+    font-size: 16px; /* Font size */
+    color: black; /* Text color */
+    white-space: normal; /* Allow text to wrap */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    overflow-wrap: break-word; /* Ensure long words break to the next line */
+    word-wrap: break-word; /* For older browsers */
+    word-break: break-word; /* Break words if necessary */
+    max-height: 60px; /* Limit height to prevent overflow */
+    overflow: auto; /* Allow scrolling if content exceeds max height */
+  } 

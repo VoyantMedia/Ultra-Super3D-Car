@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 
 const About = () => {
   const canvasRef = useRef(null);
@@ -10,6 +11,8 @@ const About = () => {
   const observerRef = useRef(null);
   const interactionRadius = 10; // Radius of mouse interaction zone
   const gravity = 0.1; // Gravity effect
+
+  const navigate = useNavigate(); // Initialize useNavigate
 
   // Function to create a new ball object
   function createBall(x, y, dx, dy, radius, color) {
@@ -227,6 +230,11 @@ const About = () => {
     mouseRef.current = { x, y };
   };
 
+  // Function to handle thumbnail click and navigate to Details.jsx
+  const handleThumbnailClick = () => {
+    navigate('/details'); // Navigate to the details route
+  };
+
   return (
     <div ref={aboutRef} className="section" style={{ position: 'relative', height: '100vh', overflow: 'hidden' }}>
       <canvas
@@ -235,7 +243,12 @@ const About = () => {
         onMouseMove={handleMouseMove}
       ></canvas>
       <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1, color: 'black', textAlign: 'center' }}>
-        <img src="/BMW-M4-4k.jpg" alt="Video Thumbnail" style={{ width: '200px', marginBottom: '20px' }} />
+        <img
+          src="/BMW-M4-4k.jpg"
+          alt="Video Thumbnail"
+          style={{ width: '200px', marginBottom: '20px', cursor: 'pointer' }}
+          onClick={handleThumbnailClick} // Add click handler for navigation
+        />
         <h1>The Machine</h1>
         <p>An engineering marvel, built for elegance and performance.</p>
       </div>
