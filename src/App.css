@@ -130,4 +130,74 @@ text {
   border-radius: 5px;
 }
 
+.details-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EFEEE7; /* Updated background color */
+  color: #000; /* Text color for better contrast */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #000; /* Close button color */
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.close-button span {
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.close-button:hover span {
+  transform: scale(1.2);
+}
+
+.content-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px; /* Space between image and text */
+}
+
+.image-section {
+  flex: 1;
+  max-width: 600px;
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.text-section {
+  flex: 1;
+  max-width: 600px;
+}
+
+.text-section h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.text-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
 /* app.css */
